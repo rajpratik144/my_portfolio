@@ -180,6 +180,7 @@ button:hover {
 #about{
     height: 90vh;
     margin-bottom: 80px;
+    transition: all 10s ease;
 }
 .about-hero {
     display: flex;
