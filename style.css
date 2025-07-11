@@ -179,6 +179,36 @@ button:hover {
 .hero-image img {
     width: 94%;
 }
+/* projects */
+.heading{
+    
+}
+.container2 {
+  display: flex;
+  gap: 20px; /* Adjust as needed */
+  justify-content: center;
+}
+
+.card {
+  height: 380px;
+  width: 320px;
+  background-color: #4b4a4b;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* When ANY card is hovered, scale down non-hovered cards */
+.container2:has(.card:hover) .card:not(:hover) {
+  transform: scale(0.9);
+}
+
+/* Scale up the hovered card */
+.card:hover {
+  transform: scale(1.1);
+  z-index: 2; /* Bring to front */
+}
+
 #about{
     height: 90vh;
     margin-bottom: 80px;
