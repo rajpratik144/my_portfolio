@@ -5,11 +5,9 @@
     background-color: #121212;
     color: white;
 }
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 .container {
     margin-left: 50px;
     margin-right: 50px;
@@ -181,13 +179,11 @@ button:hover {
 .hero-image img {
     width: 94%;
 }
-
-/* about */
-#about {
+#about{
     height: 90vh;
     margin-bottom: 80px;
+    transition: all 10s ease;
 }
-
 .about-hero {
     display: flex;
     margin-top: 30px;
@@ -211,58 +207,6 @@ button:hover {
     margin-top: 50px;
 }
 
-/* projects */
-/* #projects{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-} */
-
-#projects .heading {
-    font-weight: bolder;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.category {
-    display: flex;
-    justify-content: center;
-    gap: 3%;
-    
-}
-.category button{
-        background: linear-gradient(to right, #ff6a00, #ee0979);
-
-}
-
-
-#projects .container2 {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 5%;
-}
-
-.card {
-    height: 380px;
-    width: 320px;
-    background-color: #4b4a4b;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.1);
-    z-index: 2;
-}
-.card:hover ~ .card, 
-.container2:hover > .card:not(:hover) {
-  transform: scale(0.9);
-}
-
-/* skills */
 #skill {
     background-color: #121212;
     padding: 60px 20px;
