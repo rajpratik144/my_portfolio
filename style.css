@@ -181,7 +181,7 @@ button:hover {
 }
 /* projects */
 .heading{
-    
+    display: inline;
 }
 .container2 {
   display: flex;
