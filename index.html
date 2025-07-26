@@ -114,7 +114,11 @@
             </div>
             <div class="container2">
                 <div class="card">
-                    <div class="card-content"><a href="https://todo-app-rp8n.onrender.com"><img src="Screenshot 2025-07-26 at 5.26.16 PM.png" alt=""></a></div>
+                    <div class="card-content">
+                        <a href="https://todo-app-rp8n.onrender.com" target="_blank">
+                            <img src="Screenshot 2025-07-26 at 5.26.16 PM.png" alt="">
+                        </a>
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-content">Project 2</div>
@@ -246,10 +250,10 @@
         function changeLinkState() {
             let index = sections.length;
 
-            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-            
+            while (--index && window.scrollY + 100 < sections[index].offsetTop) { }
+
             navLinks.forEach((link) => link.classList.remove('active'));
-            if(navLinks[index]) {
+            if (navLinks[index]) {
                 navLinks[index].classList.add('active');
             }
         }
@@ -266,6 +270,7 @@
         });
     </script>
 </body>
+
 </html>
 </body>
 
