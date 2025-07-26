@@ -113,12 +113,24 @@
                 <button>Desktop App</button>
             </div>
             <div class="container2">
-                <div class="card"><div class="card-content">Project 1</div></div>
-                <div class="card"><div class="card-content">Project 2</div></div>
-                <div class="card"><div class="card-content">Project 3</div></div>
-                <div class="card"><div class="card-content">Project 4</div></div>
-                <div class="card"><div class="card-content">Project 5</div></div>
-                <div class="card"><div class="card-content">Project 6</div></div>
+                <div class="card">
+                    <div class="card-content">Project 1</div>
+                </div>
+                <div class="card">
+                    <div class="card-content">Project 2</div>
+                </div>
+                <div class="card">
+                    <div class="card-content">Project 3</div>
+                </div>
+                <div class="card">
+                    <div class="card-content">Project 4</div>
+                </div>
+                <div class="card">
+                    <div class="card-content">Project 5</div>
+                </div>
+                <div class="card">
+                    <div class="card-content">Project 6</div>
+                </div>
             </div>
         </section>
         <section id="skill">
@@ -186,7 +198,8 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    <p>I'd love to hear from you. Whether you have a question or just want to say hi, feel free to drop me a line. I am available for freelance work and collaborations.</p>
+                    <p>I'd love to hear from you. Whether you have a question or just want to say hi, feel free to drop
+                        me a line. I am available for freelance work and collaborations.</p>
                     <div class="info-item">
                         <i class="fa-solid fa-envelope"></i>
                         <a href="mailto:pratikgjimt@gmail.com">pratikgjimt@gmail.com</a>
@@ -201,10 +214,10 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="#" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <form action="https://formspree.io/f/xovldpzp" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
@@ -218,6 +231,7 @@
     </footer>
 
     <script>
+        // --- For Mobile Menu ---
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
 
@@ -225,13 +239,38 @@
             nav.classList.toggle('active');
         });
 
-        // Close menu when a nav link is clicked
-        document.querySelectorAll('nav a').forEach(link => {
+        // --- For Active Nav Link on Scroll ---
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        function changeLinkState() {
+            let index = sections.length;
+
+            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+            
+            navLinks.forEach((link) => link.classList.remove('active'));
+            // Ensure the link exists before trying to add a class to it
+            if(navLinks[index]) {
+                navLinks[index].classList.add('active');
+            }
+        }
+
+        // Run on initial load
+        changeLinkState();
+        // Run on scroll
+        window.addEventListener('scroll', changeLinkState);
+
+        // --- Close mobile menu when a nav link is clicked ---
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.remove('active');
+                if (nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                }
             });
         });
     </script>
+</body>
+</html>
 </body>
 
 </html>
